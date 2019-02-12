@@ -4,3 +4,4 @@
 /build
 /dist
 /linestar_scrape.egg-info
+/linestar/__pycache__
