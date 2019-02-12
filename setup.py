@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="linestar-scrape",
-    version="0.0.1",
+    version="0.0.2",
     author="Brendan Hart",
     author_email="brendanahart@gmail.com",
     description="A package to scrape linestarapp.com ownership data",

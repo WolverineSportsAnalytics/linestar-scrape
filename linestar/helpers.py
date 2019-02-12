@@ -2,6 +2,7 @@ import os
 from datetime import datetime
 import demjson
 import json
+import pkg_resources
 
 class LinestarPageData:
     def __init__(self, url, date):
@@ -129,12 +130,9 @@ def playerRetrival(players, competition):
     return competition
 
 def mapDateToLinestarID(day, month, year):
-    my_path = os.path.abspath(os.path.dirname(__file__))
-    path = os.path.join(my_path, "date_ids.json")
-
-    with open(path, 'r') as myfile:
-        data = myfile.read().replace('\n', '')
-    myfile.close()
+    resource_package = 'linestar'
+    resource_path = '/'.join(('templates', 'date_ids.json'))
+    data = pkg_resources.resource_string(resource_package, resource_path)
 
     linestarDateIDs = json.loads(data)
     dateKey = str(year) + "-" + str(month) + "-" + str(day)
