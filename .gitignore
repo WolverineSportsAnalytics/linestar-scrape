@@ -1,3 +1,6 @@
 /env
 /dist
 /idea
+/build
+/dist
+/linestar_scrape.egg-info
