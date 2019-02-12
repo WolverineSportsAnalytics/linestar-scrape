@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 import demjson
 import json
@@ -128,7 +129,10 @@ def playerRetrival(players, competition):
     return competition
 
 def mapDateToLinestarID(day, month, year):
-    with open('date_ids.json', 'r') as myfile:
+    my_path = os.path.abspath(os.path.dirname(__file__))
+    path = os.path.join(my_path, "date_ids.json")
+
+    with open(path, 'r') as myfile:
         data = myfile.read().replace('\n', '')
     myfile.close()
 
