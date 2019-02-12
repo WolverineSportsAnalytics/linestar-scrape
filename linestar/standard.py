@@ -61,17 +61,17 @@ def fanduel_nba_own_date_range(date1, date2):
                 lPageData.addCompetition(upComp)
 
             competitionsMap[stringDate] = lPageData
-        print("Retrieved data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
-        print("Summary of data")
-        print("Number of competitions: " + str(len(competitions)))
-        print("----------")
-        for comp in competitions:
-            print("Competition number: " + str(comp.id))
-            print("Number of Games: " + str(comp.games))
-            print("GPP: " + str(comp.gpp))
-            print("Double Up: " + str(comp.doubleUp))
-            print("Number of Players: " + str(len(comp.players)))
+            print("Retrieved data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
+            print("Summary of data")
+            print("Number of competitions: " + str(len(competitions)))
             print("----------")
+            for comp in competitions:
+                print("Competition number: " + str(comp.id))
+                print("Number of Games: " + str(comp.games))
+                print("GPP: " + str(comp.gpp))
+                print("Double Up: " + str(comp.doubleUp))
+                print("Number of Players: " + str(len(comp.players)))
+                print("----------")
         else:
             print("Unable to retrieve data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
             print("----------")
