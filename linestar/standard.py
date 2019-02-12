@@ -19,6 +19,18 @@ def fanduel_nba_own_date(date):
         for comp in competitions:
             upComp = helpers.playerRetrival(playerJSON, comp)
             lPageData.addCompetition(upComp)
+        print("Retrieved data for: " + date.year + "-" + date.month + "-" + date.day)
+        print("Summary of data")
+        print("Number of competitions: " + str(len(competitions)))
+        print("----------")
+        for comp in competitions:
+            print("Competition number: " + str(comp.id))
+            print("Number of Games: " + str(comp.games))
+            print("GPP: " + str(comp.gpp))
+            print("Double Up: " + str(comp.doubleUp))
+            print("Number of Players: " + str(len(comp.players)))
+            print("----------")
+
         return lPageData
     else:
         raise helpers.DateError(date.day, date.month, date.year)
@@ -49,7 +61,20 @@ def fanduel_nba_own_date_range(date1, date2):
                 lPageData.addCompetition(upComp)
 
             competitionsMap[stringDate] = lPageData
+        print("Retrieved data for: " + currentDate.year + "-" + currentDate.month + "-" + currentDate.day)
+        print("Summary of data")
+        print("Number of competitions: " + str(len(competitions)))
+        print("----------")
+        for comp in competitions:
+            print("Competition number: " + str(comp.id))
+            print("Number of Games: " + str(comp.games))
+            print("GPP: " + str(comp.gpp))
+            print("Double Up: " + str(comp.doubleUp))
+            print("Number of Players: " + str(len(comp.players)))
+            print("----------")
         else:
+            print("Unable to retrieve data for: " + currentDate.year + "-" + currentDate.month + "-" + currentDate.day)
+            print("----------")
             badDates.append(stringDate)
             competitionsMap[stringDate] = []
 
