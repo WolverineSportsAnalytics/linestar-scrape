@@ -67,4 +67,5 @@ Members
 `import linestar`
 
 `single_data = linestar.standard.fanduel_nba_own_date(datetime(2019, 2, 10))`
+
 `range_data = linestar.standard.fanduel_nba_own_date(datetime(2019, 2, 5), datetime(2019, 2, 10))`
