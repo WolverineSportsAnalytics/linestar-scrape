@@ -73,7 +73,7 @@ def fanduel_nba_own_date_range(date1, date2):
             print("Number of Players: " + str(len(comp.players)))
             print("----------")
         else:
-            print("Unable to retrieve data for: " + currentDate.year + "-" + currentDate.month + "-" + currentDate.day)
+            print("Unable to retrieve data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
             print("----------")
             badDates.append(stringDate)
             competitionsMap[stringDate] = []
