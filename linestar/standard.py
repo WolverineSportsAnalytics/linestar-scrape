@@ -19,7 +19,7 @@ def fanduel_nba_own_date(date):
         for comp in competitions:
             upComp = helpers.playerRetrival(playerJSON, comp)
             lPageData.addCompetition(upComp)
-        print("Retrieved data for: " + date.year + "-" + date.month + "-" + date.day)
+        print("Retrieved data for: " + str(date.year) + "-" + str(date.month) + "-" + str(date.day))
         print("Summary of data")
         print("Number of competitions: " + str(len(competitions)))
         print("----------")
@@ -61,7 +61,7 @@ def fanduel_nba_own_date_range(date1, date2):
                 lPageData.addCompetition(upComp)
 
             competitionsMap[stringDate] = lPageData
-        print("Retrieved data for: " + currentDate.year + "-" + currentDate.month + "-" + currentDate.day)
+        print("Retrieved data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
         print("Summary of data")
         print("Number of competitions: " + str(len(competitions)))
         print("----------")
