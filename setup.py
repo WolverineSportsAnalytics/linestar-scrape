@@ -7,7 +7,7 @@ setuptools.setup(
     include_package_data=True,
     package_data={'linestar': ['static/date_ids.json']},
     name="linestar-scrape",
-    version="1.0.0",
+    version="1.0.2",
     author="Brendan Hart",
     author_email="brendanahart@gmail.com",
     description="A package to scrape linestarapp.com daily fantasy sports ownership data",

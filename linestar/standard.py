@@ -10,7 +10,7 @@ def fanduel_nba_own_date(date):
 
     competitions = helpers.getAndFormCompetitions(soup)
     currentDate = helpers.dateFromLineStar(soup)
-    stringDate = str(currentDate.day) + "-" + str(currentDate.month) + "-" + str(currentDate.year)
+    stringDate = str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day)
 
     lPageData = helpers.LinestarPageData(url, stringDate)
 
@@ -38,8 +38,8 @@ def fanduel_nba_own_date(date):
 def fanduel_nba_own_date_range(date1, date2):
     competitionsMap = {}
 
-    dateIDStart = helpers.mapDateToLinestarID(date1.year, date1.month, date1.day)
-    dateIDEnd = helpers.mapDateToLinestarID(date2.year, date2.month, date2.day)
+    dateIDStart = helpers.mapDateToLinestarID(date1.day, date1.month, date1.year)
+    dateIDEnd = helpers.mapDateToLinestarID(date2.day, date2.month, date2.year)
 
     badDates = []
 
