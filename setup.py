@@ -4,11 +4,10 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    package_data = {
-        'templates': ['*'],
-    },
+    include_package_data=True,
+    package_data={'linestar': ['static/date_ids.json']},
     name="linestar-scrape",
-    version="0.0.3",
+    version="1.0.0",
     author="Brendan Hart",
     author_email="brendanahart@gmail.com",
     description="A package to scrape linestarapp.com daily fantasy sports ownership data",

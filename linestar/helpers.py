@@ -131,7 +131,7 @@ def playerRetrival(players, competition):
 
 def mapDateToLinestarID(day, month, year):
     resource_package = 'linestar'
-    resource_path = '/'.join(('templates', 'date_ids.json'))
+    resource_path = '/'.join(('static', 'date_ids.json'))
     data = pkg_resources.resource_string(resource_package, resource_path)
 
     linestarDateIDs = json.loads(data)
