@@ -51,6 +51,9 @@ class DateError(Exception):
     def datePrint(self):
         print("Could not get data for this day: " + self.year + "-" + self.month + "-" + self.day)
 
+def inclusiveRange(start, end):
+    return range(start, end + 1)
+
 def removeWhitespace(string):
     string = string.strip()
     string = string.replace('\n', '')

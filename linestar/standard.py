@@ -43,7 +43,7 @@ def fanduel_nba_own_date_range(date1, date2):
 
     badDates = []
 
-    for x in range(dateIDStart, dateIDEnd):
+    for x in helpers.inclusiveRange(dateIDStart, dateIDEnd):
         url = "https://www.linestarapp.com/Ownership/Sport/NBA/Site/FanDuel/PID/" + str(x)
         page = requests.get(url)
         soup = BeautifulSoup(page.text, 'html.parser')
