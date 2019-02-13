@@ -26,7 +26,7 @@ Inputs:
 * date1 = Python datetime for first date
 * date2 = Python datetime for second date
 
-Output: Linestar Map with Date String (YYYY-MM-DD) being the key and a Linestar Page Data Object being a value
+Output: Linestar Map with Date String (YYYY-MM-DD) being the key and a Linestar Page Data Object being a value for inclusive range of dates
 
 ### Linestar Objects
 **Linestar Page Data**
