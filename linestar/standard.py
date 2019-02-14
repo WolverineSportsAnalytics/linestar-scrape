@@ -76,7 +76,7 @@ def fanduel_nba_own_date_range(date1, date2):
             print("Unable to retrieve data for: " + str(currentDate.year) + "-" + str(currentDate.month) + "-" + str(currentDate.day))
             print("----------")
             badDates.append(stringDate)
-            competitionsMap[stringDate] = []
+            competitionsMap[stringDate] = lPageData
 
     if len(badDates) >= 1:
         print("Unable to get ownership data for following dates:")
